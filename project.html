@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+            text-align: center; 
+        }
+
+        h2 {
+            margin: 20px 0;
+            text-align: center; 
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: space-between; 
+            width: 60%; 
+            margin: 20px auto; 
+        }
+
+        button {
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            border-radius: 5x px;
+            background-color: rgb(122, 122, 224);
+            color: white;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto; 
+            width: 800px; 
+            height: 400px;
+            border: 1px solid black; 
+        }
+    </style>
+    <title>Class Works</title>
+</head>
+<body>
+    <h2>Class Works</h2>
+    <div id="buttons">
+        <button id="task1-button">Project1</button>
+        <button id="task2-button">Project2</button>
+        <button id="task3-button">Project3</button>
+    </div>
+    <iframe id="iframe-display" src=""></iframe>
+
+    <script>
+        const works = {
+            "task1": {"title": "Project 1", "url": "C:/Users/sganapa1/Desktop/3_13_25/task1.html"},
+            "task2": {"title": "Project 2", "url": "C:/Users/sganapa1/Desktop/3_13_25/task2.html"},
+            "task3": {"title": "Project 3", "url": "C:/Users/sganapa1/Desktop/3_13_25/task3.html"},
+        };
+
+      
+        const task1Button = document.getElementById("task1-button");
+        const task2Button = document.getElementById("task2-button");
+        const task3Button = document.getElementById("task3-button");
+        const iframe = document.getElementById("iframe-display");
+
+        
+        task1Button.addEventListener("click", () => {
+            iframe.src = works.task1.url;
+        });
+
+        task2Button.addEventListener("click", () => {
+            iframe.src = works.task2.url;
+        });
+
+        task3Button.addEventListener("click", () => {
+            iframe.src = works.task3.url;
+        });
+    </script>
+</body>
+</html>
